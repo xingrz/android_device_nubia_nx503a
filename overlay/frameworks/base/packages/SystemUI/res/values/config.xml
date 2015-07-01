@@ -2,6 +2,7 @@
 <!--
 /*
 ** Copyright 2009, The Android Open Source Project
+** Copyright 2014, The CyanogenMod Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -23,6 +24,6 @@
 
     <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
     <bool name="doze_display_state_supported">true</bool>
+    <bool name="doze_pulse_on_pick_up">true</bool>
 
 </resources>
-
