@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libbson
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # LOWI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/lowi.conf:system/etc/lowi.conf
