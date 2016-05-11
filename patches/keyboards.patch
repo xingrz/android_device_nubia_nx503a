@@ -1,7 +1,7 @@
 
 project frameworks/base/
 diff --git a/frameworks/base/data/keyboards/Generic.kl b/frameworks/base/data/keyboards/Generic.kl
-index f10ba96..0832aa6 100644
+index f10ba96..33d8251 100644
 --- a/frameworks/base/data/keyboards/Generic.kl
 +++ b/frameworks/base/data/keyboards/Generic.kl
 @@ -121,7 +121,9 @@ key 98    NUMPAD_DIVIDE
@@ -21,19 +21,17 @@ index f10ba96..0832aa6 100644
  # key 138 "KEY_HELP"
 -key 139   MENU
 +#/* ZTEMT Modify by luochangyang, 2013/06/04 */
-+key 139   MENU              VIRTUAL
++key 139   BACK              VIRTUAL
 +#/* ZTEMT END */
  key 140   CALCULATOR
  # key 141 "KEY_SETUP"
  key 142   SLEEP
-@@ -177,7 +181,9 @@ key 152   POWER
+@@ -177,7 +181,7 @@ key 152   POWER
  key 155   ENVELOPE
  key 156   BOOKMARK
  # key 157 "KEY_COMPUTER"
 -key 158   BACK
-+#/* ZTEMT Modify by luochangyang, 2013/06/04 */
-+key 158   BACK              VIRTUAL
-+#/* ZTEMT END */
++key 158   APP_SWITCH        VIRTUAL
  key 159   FORWARD
  key 160   MEDIA_CLOSE
  key 161   MEDIA_EJECT
