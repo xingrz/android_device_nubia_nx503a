@@ -5,4 +5,8 @@
 /boot       emmc        /dev/block/platform/msm_sdcc.1/by-name/boot
 /recovery   emmc        /dev/block/platform/msm_sdcc.1/by-name/recovery
 
-/sdcard     vfat        /dev/block/vold/179:23
+/sdcard             vfat    /dev/block/platform/msm_sdcc.1/by-name/grow
+/storage/sdcard0    vfat    /dev/block/platform/msm_sdcc.1/by-name/grow
+
+/misc       emmc        /dev/block/platform/msm_sdcc.1/by-name/misc
+/persist    ext4        /dev/block/platform/msm_sdcc.1/by-name/persist
