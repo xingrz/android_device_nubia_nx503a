@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     camera.msm8974 \
     Snap
-    
+
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    liboverlay 
+    liboverlay
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -179,7 +179,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/media_codecs_8974.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/etc/media_codecs_performance_8974.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/etc/media_profiles_8974.xml:system/etc/media_profiles.xml
-    
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -247,7 +247,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ro.sys.umsdirtyratio=20
-    
+
 # ANT+
 PRODUCT_PACKAGES += \
     libantradio \
@@ -319,10 +319,6 @@ PRODUCT_COPY_FILES += \
 # External key layouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/keylayout/Vendor_0a5c_Product_8502.kl:system/usr/keylayout/Vendor_0a5c_Product_8502.kl
-
-# set_softkey
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/etc/set_softkey.sh:system/bin/set_softkey.sh
 
 # Camera2 API
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
