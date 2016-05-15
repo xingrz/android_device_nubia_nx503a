@@ -17,14 +17,14 @@
 $(call inherit-product, device/zte/nx503a/nx503a.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := nx503a
-PRODUCT_NAME := cm_nx503a
+PRODUCT_NAME := mk_nx503a
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := NX503A
 PRODUCT_MANUFACTURER := nubia
