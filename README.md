@@ -21,14 +21,7 @@ MoKee 60.1 for ZTE Nubia Z5S (`nx503a`)
     </manifest>
     ```
 
-3.  Apply patches:
-
-    ```sh
-    patch frameworks/base/data/keyboards/Generic.kl \
-      device/zte/nx503a/patches/keyboards.patch
-    ```
-
-4.  Build!
+3.  Build!
 
     ```sh
     . build/envsetup.sh
