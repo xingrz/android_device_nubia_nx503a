@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Inherit device configuration
-$(call inherit-product, device/zte/nx503a/nx503a.mk)
+$(call inherit-product, device/nubia/nx503a/nx503a.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/mk/config/nfc_enhanced.mk)

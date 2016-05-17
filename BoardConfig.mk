@@ -14,9 +14,9 @@
 # limitations under the License.
 
 # Inherit from the proprietary version
--include vendor/zte/nx503a/BoardConfigVendor.mk
+-include vendor/nubia/nx503a/BoardConfigVendor.mk
 
-LOCAL_PATH := device/zte/nx503a
+LOCAL_PATH := device/nubia/nx503a
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -52,7 +52,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000
-TARGET_KERNEL_SOURCE := kernel/zte/nx503a
+TARGET_KERNEL_SOURCE := kernel/nubia/nx503a
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
 TARGET_ZTEMT_DTS := true
@@ -76,7 +76,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
-BOARD_BLUEDROID_VENDOR_CONF := device/zte/nx503a/bluetooth/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/nubia/nx503a/bluetooth/libbt_vndcfg.txt
 
 # Camera
 TARGET_USE_COMPAT_GRALLOC_ALIGN := true
@@ -150,7 +150,7 @@ BOARD_USES_QCOM_HARDWARE := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 BOARD_VENDOR := zte-qcom
 
 BOARD_USES_SECURE_SERVICES := true
@@ -192,8 +192,3 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP      := "/etc/firmware/bcm4339/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA     := "/etc/firmware/bcm4339/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_P2P     := "/etc/firmware/bcm4339/fw_bcmdhd_p2p.bin"
-
-# TWRP
-RECOVERY_VARIANT := twrp
-TW_THEME := portrait_hdpi
-PRODUCT_COPY_FILES += device/zte/nx503a/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
