@@ -306,7 +306,7 @@ on post-fs-data
     chown system system /sys/class/hall_device/hall_device/enable
 
     chmod 0644 /sys/class/hall_device/hall_device/enable
-    
+
 	#proximity
 	mkdir /persist/proxdata 0775 system system
 	chown system system /persist/proxdata
@@ -356,7 +356,7 @@ on post-fs-data
 	chmod 0644 /sys/class/proximity/proximity/prox_pluse_length
 	chmod 0644 /sys/class/proximity/proximity/prox_thres_pulse_count
 
-    
+
 	#light
     chown system system /sys/class/light/light/enable
     chown system system /sys/class/light/light/delay
@@ -382,11 +382,15 @@ on post-fs-data
 	#sensor_common
     chown system system /sys/class/sensor/temp_humidity/raw_humidity
     chown system system /sys/class/sensor/temp_humidity/raw_temp
-    
+
 # ADDED BY ZTEMT ZhuBing END
 
-#ZTEMT enable detceting 9V charger 
+#ZTEMT enable detceting 9V charger
     setprop persist.usb.hvdcp.detect true
+
+    # Torch
+    chown system camera /sys/class/leds/torch-light/brightness
+    chmod 0660 /sys/class/leds/torch-light/brightness
 
 # Export GPIO56 for fusion targets to enable/disable hub
 service usbhub_init /system/bin/usbhub_init
@@ -454,7 +458,7 @@ on property:bluetooth.dun.status=stopped
 
 on property:ro.bluetooth.ftm_enabled=true
     start ftmd
-    
+
 on property:persist.service.ftmdaemon=1
 	start ftmd
 
@@ -1045,10 +1049,10 @@ service zte_addr_config /system/bin/zte_addr_config
 #ZTEMT ADD by mayu 2013-9-14 for lcd image enhance
 on property:persist.sys.image.enhance=w
     write /sys/kernel/lcd_enhance/saturation 24
-	
+
 on property:persist.sys.image.enhance=n
     write /sys/kernel/lcd_enhance/saturation 25
-	
+
 on property:persist.sys.image.enhance=i
     write /sys/kernel/lcd_enhance/saturation 26
 
