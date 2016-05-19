@@ -13,56 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# inherit common device tree
+-include device/oppo/msm8974-common/BoardConfigCommon.mk
+
 # Inherit from the proprietary version
 -include vendor/zte/nx503a/BoardConfigVendor.mk
 
 LOCAL_PATH := device/zte/nx503a
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
-TARGET_BOOTLOADER_NAME := nubia
+TARGET_BOOTLOADER_BOARD_NAME := nx503a
+TARGET_OTA_ASSERT_DEVICE := NX503A,nx503a,Z5S,z5s,NX503AJ,nx503aj,Z5SN,z5sn
 
-# Architecture
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := krait
-ARCH_ARM_HAVE_ARMV7A := true
-ARCH_ARM_HAVE_NEON := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
-ARCH_ARM_HAVE_VFP := true
-
-# Assertions
-TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
-
-# Kernel
-DTS_NAME := msm8974-v2.2-mtp-NX503A
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
-BOARD_KERNEL_SEPARATED_DT := true
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
-TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
 TARGET_ZTEMT_DTS := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := NX503A,nx503a,Z5S,z5s,NX503AJ,nx503aj,Z5SN,z5sn
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -162,16 +134,8 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# RIL
-TARGET_RIL_VARIANT := caf
-COMMON_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
-COMMON_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
-
 # RPC
 TARGET_NO_RPC := true
-
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
         $(LOCAL_PATH)/sepolicy
@@ -194,6 +158,4 @@ WIFI_DRIVER_FW_PATH_STA     := "/etc/firmware/bcm4339/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_P2P     := "/etc/firmware/bcm4339/fw_bcmdhd_p2p.bin"
 
 # TWRP
-RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-PRODUCT_COPY_FILES += device/zte/nx503a/recovery/twrp.fstab:recovery/root/etc/twrp.fstab

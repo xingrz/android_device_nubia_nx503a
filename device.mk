@@ -14,14 +14,21 @@
 # limitations under the License.
 #
 
-# Languages Pack
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+# Include common makefile
+$(call inherit-product, device/oppo/msm8974-common/common.mk)
+
+$(call inherit-product, frameworks/native-caf/build/phone-xxxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product, frameworks/native-caf/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Vendor
 $(call inherit-product-if-exists, vendor/zte/nx503a/nx503a-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# TWRP
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -196,10 +203,6 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
-
-# LibPower
-PRODUCT_PACKAGES += \
-    power.qcom
 
 # Ramdisk
 PRODUCT_PACKAGES += \
