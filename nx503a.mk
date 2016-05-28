@@ -224,7 +224,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc	\
+    tp_node.sh
 
 # Thermal config
 PRODUCT_COPY_FILES += \

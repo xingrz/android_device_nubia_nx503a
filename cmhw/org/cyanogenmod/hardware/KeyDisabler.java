@@ -18,6 +18,8 @@ package org.cyanogenmod.hardware;
 
 import org.cyanogenmod.hardware.util.FileUtils;
 
+import java.io.File;
+
 /*
  * Disable capacitive keys
  *
@@ -29,10 +31,10 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/proc/touchpanel/keypad_enable";
+    private static String CONTROL_PATH = "/data/tp/keypad_enable";
 
     public static boolean isSupported() {
-        return true;
+        return new File(CONTROL_PATH).exists();
     }
 
     public static boolean isActive() {
