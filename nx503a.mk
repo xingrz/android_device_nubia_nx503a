@@ -328,13 +328,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.gmm=android-zte \
     ro.com.google.clientidbase.yt=android-zte \
 
-# CDMA
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.force_eri_from_xml=true
-
 # Disable QC Oem Hook
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.oem_socket=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.radio.oem_socket=false
 
 # set USB OTG enabled to add support for USB storage type
 PRODUCT_PROPERTY_OVERRIDES += \

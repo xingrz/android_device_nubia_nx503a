@@ -311,4 +311,7 @@
          format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">LTE|CDMA|EVDO|GSM|WCDMA</string>
 
+    <integer name="config_extraFreeKbytesAbsolute">35840</integer>
+
+    <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">204800</integer>
 </resources>
