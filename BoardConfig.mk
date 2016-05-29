@@ -30,16 +30,11 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_BOOTLOADER_NAME := nubia
 
 # Architecture
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-ARCH_ARM_HAVE_ARMV7A := true
-ARCH_ARM_HAVE_NEON := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
-ARCH_ARM_HAVE_VFP := true
 
 # Assertions
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
