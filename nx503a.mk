@@ -63,6 +63,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
@@ -346,5 +348,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
     persist.radio.apm_sim_not_pwdn=1
 
+# Art
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapminfree=2m
+    dalvik.vm.dex2oat-swap=false

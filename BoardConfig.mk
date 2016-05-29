@@ -61,6 +61,8 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
+USE_CLANG_PLATFORM_BUILD := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
@@ -92,9 +94,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
-
-# Disable memcpy_base.S optimization
-TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
