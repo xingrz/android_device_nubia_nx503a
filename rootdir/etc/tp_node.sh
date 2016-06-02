@@ -8,14 +8,17 @@ else
     rm /data/tp/*
 fi
 
+SYSFS_SYNAPTICS="/sys/bus/i2c/devices/2-0022/input/input0/0dbutton"
+SYSFS_CYTTSP4="/sys/bus/ttsp4/drivers/cyttsp4_btn/cyttsp4_btn.main_ttsp_core/button"
+
 # Synaptics
-if [ -e /sys/bus/i2c/devices/2-0022/input/input0/0dbutton ]; then
-    chown system:system /sys/bus/i2c/devices/2-0022/input/input0/0dbutton
-    ln -s /sys/bus/i2c/devices/2-0022/input/input0/0dbutton /data/tp/keypad_enable
+if [ -e $SYSFS_SYNAPTICS ]; then
+    chown system:system $SYSFS_SYNAPTICS
+    ln -s $SYSFS_SYNAPTICS /data/tp/keypad_enable
 fi
 
-# Legcy path: I don't know how to implement it for Cyttsp4
-if [ -e /proc/touchpanel/keypad_enable ]; then
-    chown system:system /proc/touchpanel/keypad_enable
-    ln -s /proc/touchpanel/keypad_enable /data/tp/keypad_enable
+# Cyttsp4
+if [ -e $SYSFS_CYTTSP4 ]; then
+    chown system:system $SYSFS_CYTTSP4
+    ln -s $SYSFS_CYTTSP4 /data/tp/keypad_enable
 fi
