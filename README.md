@@ -14,9 +14,6 @@ CyanogenMod 13.0 for ZTE Nubia Z5S (`nx503a`)
       <project name="nx503a-dev/android_kernel_zte_nx503a" path="kernel/zte/nx503a" remote="github" revision="cm-13.0" />
       <project name="nx503a-dev/android_vendor_zte_nx503a" path="vendor/zte/nx503a" remote="github" revision="cm-13.0" />
 
-      <project name="CyanogenMod/android_external_busybox" path="external/busybox" remote="github" revision="cm-13.0" />
-      <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-6.0" />
-
     </manifest>
     ```
 
