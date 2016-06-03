@@ -89,6 +89,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
+TARGET_TAP_TO_WAKE_NODE := "/data/tp/tap_to_wake"
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)

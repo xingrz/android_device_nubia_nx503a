@@ -256,6 +256,9 @@
          config to 7. -->
     <integer name="config_deviceHardwareWakeKeys">96</integer>
 
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
     <!-- Default interface to monitor data use -->
     <string name="config_datause_iface">rmnet0</string>
 
