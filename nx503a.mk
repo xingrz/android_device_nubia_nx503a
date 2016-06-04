@@ -155,10 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
-# HAL blob compatibility
-PRODUCT_PACKAGES += \
-    libstlport
-
 # LOWI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/lowi.conf:system/etc/lowi.conf
