@@ -24,8 +24,3 @@ CyanogenMod 13.0 for ZTE Nubia Z5S (`nx503a`)
     breakfast nx503a
     make bacon
     ```
-
-## Known issues
-
-* Not compatible with China Telecom (CDMA2000).
-* Google Camera (which using `Camera2` API) can't take photos -- use Snap Camera instead.
