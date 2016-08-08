@@ -321,4 +321,7 @@
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
+    <!-- Enable blur support -->
+    <bool name="config_ui_blur_enabled">true</bool>
+
 </resources>
