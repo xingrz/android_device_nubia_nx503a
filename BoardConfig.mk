@@ -40,8 +40,6 @@ TARGET_CPU_VARIANT := krait
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
 
 # Kernel
-DTS_NAME := msm8974-v2.2-mtp-NX503A
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE := 0x00000000
@@ -50,7 +48,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := msm8974-NX503A_defconfig
-TARGET_ZTEMT_DTS := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Added to indicate that protobuf-c is supported in this build
