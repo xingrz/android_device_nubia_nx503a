@@ -168,7 +168,7 @@ TARGET_NO_RPC := true
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-        $(LOCAL_PATH)/sepolicy
+    $(LOCAL_PATH)/sepolicy
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
